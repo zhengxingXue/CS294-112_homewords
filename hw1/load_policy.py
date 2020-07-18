@@ -4,6 +4,8 @@ def load_policy(filename):
     with open(filename, 'rb') as f:
         data = pickle.loads(f.read())
 
+    # print(data)
+
     # assert len(data.keys()) == 2
     nonlin_type = data['nonlin_type']
     policy_type = [k for k in data.keys() if k != 'nonlin_type'][0]
